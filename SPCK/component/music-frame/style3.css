@@ -1,0 +1,101 @@
+div.musicFrame3 {
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-sizing: border-box;
+  align-items: center;
+  border-radius: 10px;
+  transition: 0.5s;
+  width: 100%;
+}
+
+div.musicFrame3 div.SonginforLeft {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+  position: relative;
+}
+
+div.musicFrame3 div.SonginforLeft div.playPauseBtn {
+  position: absolute;
+  opacity: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+div.musicFrame3:hover div.SonginforLeft div.playPauseBtn {
+  opacity: 1;
+}
+
+div.musicFrame3 div.SonginforLeft img {
+  width: 50px;
+  height: 50px;
+}
+
+div.musicFrame3:hover div.SonginforLeft img {
+  filter: brightness(50%);
+}
+
+div.musicFrame3 div.SonginforLeft div.nameSong-author {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+div.musicFrame3 div.SonginforLeft div.nameSong-author div.song {
+  font-size: 20px;
+  border-bottom: 1px solid inherit;
+}
+div.musicFrame3:hover div.SonginforLeft div.nameSong-author div.song {
+  border-bottom: 1px solid white;
+}
+
+div.musicFrame3 div.SonginforLeft div.nameSong-author div.author {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/*  */
+div.musicFrame3 div.SonginforRight {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 150px;
+}
+
+div.musicFrame3 div.SonginforRight div.btnAddToPlaylist {
+  font-size: 16px;
+  font-weight: 600;
+  border: 2px solid;
+  border-radius: 50%;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  opacity: 0;
+}
+
+div.musicFrame3 div.SonginforRight div.checkMore {
+  font-size: 16px;
+  opacity: 0;
+  font-weight: 600;
+}
+
+div.musicFrame3:hover {
+  background-color: rgb(116, 111, 111);
+}
+.musicFrame3:hover div.SonginforRight .btnAddToPlaylist,
+.musicFrame3:hover div.SonginforRight .checkMore {
+  opacity: 1;
+}

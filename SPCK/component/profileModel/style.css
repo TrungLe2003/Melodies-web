@@ -1,0 +1,36 @@
+div.profileModal {
+  position: absolute;
+  background-color: #282828;
+  width: 200px;
+  z-index: 10;
+  top: 68px;
+  right: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+div.profileModal div.line {
+  border: 1px solid gray;
+  opacity: 0.5;
+  width: 100%;
+}
+
+div.profileModal div.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  border: 1px solid #282828;
+  border-radius: 5px;
+  padding: 5px;
+  transition: 0.5s;
+}
+
+div.profileModal div.row:hover {
+  background-color: rgb(116, 111, 111);
+}

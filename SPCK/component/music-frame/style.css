@@ -1,0 +1,54 @@
+div.music {
+  height: 45px;
+  background-color: #1e1e1e;
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: px;
+  padding: 0px;
+  font-size: 16px;
+  border-radius: 5px;
+  width: 100%;
+}
+
+div.music div.music-name-image {
+  display: flex;
+  flex-direction: row;
+  gap: 70px;
+  border-radius: 5px;
+}
+
+div.music div.music-name-image div.nameSong-author {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  margin: 5px;
+}
+div.nameSong {
+  max-width: 100%;
+  white-space: nowrap; /* Đảm bảo văn bản không xuống dòng */
+  flex: 1;
+  font-size: 14px;
+}
+
+div.music div.music-name-image div.nameSong-author div.author {
+  font-size: 13px;
+  opacity: 0.5;
+}
+
+div.music div.music-name-image img {
+  height: 45px;
+  width: 45px;
+}
+
+div.release-date,
+div.album-name,
+div.time {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

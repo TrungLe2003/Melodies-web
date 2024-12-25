@@ -1,0 +1,178 @@
+div.searchP {
+  padding: 40px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  color: #fff1c2;
+}
+/*  */
+
+div.searchP div.TopResult div.topResultList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 0px;
+}
+
+div.searchP div.TopResult h2 span {
+  color: #f86263;
+}
+
+div.searchP div.TopResult div.topResultFrame {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  background-color: #f86263;
+  border-radius: 5px;
+  padding: 10px;
+  height: 100px;
+}
+
+div.searchP div.TopResult div.topResultFrame img {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  width: 100px;
+  height: 100%;
+}
+
+div.searchP div.TopResult div.topResultFrame div.topResultInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+}
+
+div.searchP div.TopResult div.topResultFrame div.topResultInfo div.cate {
+  opacity: 0.5;
+  font-size: 12px;
+}
+
+div.searchP div.TopResult div.topResultFrame div.topResultInfo div.songName {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+div.searchP div.TopResult div.topResultFrame div.topResultInfo div.artistName {
+  opacity: 0.5;
+  font-size: 12px;
+}
+/* song found */
+div.searchP div.songFoundFrame {
+}
+
+div.searchP div.songFoundFrame div.songFoundList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 100px;
+  grid-row-gap: 0;
+}
+
+div.songFoundFrame div.songFoundList div.songFound {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 60px;
+  border-bottom: 1px solid gray;
+  padding: 20px 45px;
+  align-items: center;
+  transition: 0.3s;
+}
+
+div.songFoundFrame div.songFoundList div.songFound:hover {
+  background-color: #f86263;
+  border-radius: 5px;
+}
+
+div.songFoundFrame div.songFoundList div.songFound div.songFoundFrameLeft {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+div.songFoundFrame div.songFoundList div.songFound div.songFoundFrameLeft img {
+  border-radius: 3px;
+  height: 60px;
+  width: 60px;
+}
+
+div.songFoundFrame
+  div.songFoundList
+  div.songFound
+  div.songFoundFrameLeft
+  div.songFoundInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 5px;
+}
+
+div.songFoundList
+  div.songFound
+  div.songFoundFrameLeft
+  div.songFoundInfo
+  div.songName {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+div.songFoundList
+  div.songFound
+  div.songFoundFrameLeft
+  div.songFoundInfo
+  div.artistName {
+  opacity: 0.5;
+  font-size: 12px;
+}
+
+/*  */
+
+div.searchP h2 {
+  margin-bottom: 20px;
+}
+
+div.someCategory h2 span {
+  color: #f32ebc;
+}
+
+div.listCategory {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 30px;
+}
+
+div.listCategory div.item {
+  border-radius: 10px;
+  background-color: #0e1920;
+  position: relative;
+  width: 200px;
+  height: 120px;
+  overflow: hidden;
+}
+
+div.listCategory div.item img {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  transform: rotate(20deg);
+  right: -8px;
+  top: 30px;
+}
+
+div.listCategory div.item div.nameCategory {
+  font-weight: 600;
+  font-size: 20px;
+  position: relative;
+  top: 20px;
+  left: 20px;
+}
+
+div.searchP div.albumFound div.albumFoundList {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}

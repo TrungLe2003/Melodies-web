@@ -1,0 +1,322 @@
+div.SongPage {
+  padding: 40px 60px;
+  color: white;
+}
+
+div.SongPage div.albumFrame {
+  background-color: #1a1414;
+  width: 100%;
+  padding-bottom: 50px;
+  border-radius: 20px;
+  background: linear-gradient(to right, #f86263, #1a1414);
+}
+
+div.SongPage div.albumFrame div.albumHeaderFrame {
+  width: 100%;
+  height: 400px;
+  background-color: #f86263;
+  padding: 50px;
+  box-sizing: border-box;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+div.SongPage div.albumFrame div.albumHeaderFrame div.albumImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+div.SongPage div.albumFrame div.albumHeaderFrame div.albumImg img {
+  height: 300px;
+  width: 300px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+div.SongPage div.albumFrame div.albumHeaderFrame div.someAlbumInfromation {
+  display: flex;
+  justify-content: end;
+
+  flex-direction: column;
+}
+
+div.SongPage
+  div.albumFrame
+  div.albumHeaderFrame
+  div.someAlbumInfromation
+  div.AlbumsName {
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 45px;
+}
+
+div.albumHeaderFrame div.someAlbumInfromation div.authorInforCount {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+div.albumHeaderFrame
+  div.someAlbumInfromation
+  div.authorInforCount
+  div.authorInfor {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+div.albumHeaderFrame
+  div.someAlbumInfromation
+  div.authorInforCount
+  div.authorInfor
+  img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+/* actionFrame */
+div.SongPage div.albumFrame div.actionFrame {
+  padding: 30px 50px;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  /* background: linear-gradient(to bottom, #062b48, #1a1414); */
+  /* tạo hiệu ứng chuyển màu dần cho div */
+  /* sau đặt biến màu ở đây */
+}
+
+div.SongPage div.albumFrame div.actionFrame div.actionFrameLeft {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  width: 400px;
+  align-items: center;
+}
+
+div.SongPage div.albumFrame div.actionFrame div.actionFrameLeft div.btnPlay {
+  background-color: #f32ebc;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border-radius: 50%;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+div.SongPage
+  div.albumFrame
+  div.actionFrame
+  div.actionFrameLeft
+  div.btnAddToPlaylist {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border: 2px solid white;
+  font-size: 40px;
+}
+
+div.SongPage div.actionFrame div.actionFrameLeft div.checkMore {
+  font-size: 40px;
+  width: 40px;
+  height: 40px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div.SongPage div.albumFrame div.actionFrame div.actionFrameRight {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+div.SongPage div.albumFrame div.actionFrame div.actionFrameRight div {
+  font-size: 20px;
+}
+
+/* recommendedSong */
+
+div.SongPage div.albumFrame div.recommendedSong {
+  padding: 20px 50px;
+  margin-top: 60px;
+}
+
+div.SongPage div.albumFrame div.recommendedSong div.title {
+  margin-bottom: 30px;
+}
+
+div.SongPage div.albumFrame div.recommendedSong div.title div {
+  opacity: 0.5;
+  margin-top: 5px;
+}
+
+/* popularTrack */
+div.SongPage div.popularTrack {
+  padding: 20px 50px;
+  margin-top: 60px;
+}
+
+div.SongPage div.popularTrack div.title {
+  margin-bottom: 30px;
+}
+
+div.SongPage div.popularTrack div.title div {
+  opacity: 0.5;
+  margin-top: 5px;
+}
+
+div.SongPage div.popularTrack div.popularTrackSongList {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+div.SongPage div.popularTrack div.popularTrackSongList div.musicFrame {
+  display: flex;
+  width: 100%;
+  gap: 40px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+div.SongPage
+  div.popularTrack
+  div.popularTrackSongList
+  div.musicFrame
+  div.musicCount {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  padding-left: 10px;
+}
+
+/* fanAlsoLike */
+div.SongPage div.fanAlsoLike {
+  padding: 20px 50px;
+  margin-top: 60px;
+}
+
+div.SongPage div.fanAlsoLike div.title {
+  margin-bottom: 30px;
+}
+
+div.SongPage div.fanAlsoLike div.fanAlsoLikeList {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+div.SongPage div.fanAlsoLike div.fanAlsoLikeList:hover div.item:not(:hover) {
+  filter: blur(8px);
+}
+
+/* popularAlbum */
+div.SongPage div.popularAlbum {
+  padding: 20px 50px;
+}
+
+div.SongPage div.popularAlbum h2 {
+  margin-bottom: 20px;
+}
+
+div.SongPage div.popularAlbum h2 span {
+  color: blue;
+}
+
+div.SongPage div.popularAlbum div.popularAlbumList {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+/*  */
+div.SongPage div.popularAlbumBottom {
+  margin-left: 50px;
+  margin-top: 50px;
+  opacity: 0.5;
+}
+
+/* albumListFrame */
+
+div.SongPage div.albumFrame div.fromTheAlbumFrame {
+  background-color: #2a2a2a;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  height: 100px;
+  margin-bottom: 25px;
+  font-weight: 600;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  transition: 0.5s;
+}
+
+div.SongPage div.albumFrame div.fromTheAlbumFrame:hover {
+  background-color: rgb(116, 111, 111);
+}
+
+div.SongPage div.albumFrame div.fromTheAlbumFrame img {
+  width: 100px;
+  height: 100px;
+  border-top-left-radius: 15px;
+}
+
+div.SongPage div.albumFrame div.fromTheAlbumFrame div.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+
+div.SongPage div.albumFrame div.fromTheAlbumFrame div.title div.fromAlbum {
+  font-size: 12px;
+}
+
+div.SongPage div.albumFrame div.albumListFrame {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 30px 50px;
+}
+
+div.SongPage div.albumFrame div.albumListFrame div.musicFrame {
+  display: flex;
+  width: 100%;
+  gap: 40px;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+div.SongPage div.albumFrame div.albumListFrame div.musicFrame div.musicCount {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  padding-left: 10px;
+}
+
+div.SongPage div.releaseTime {
+  margin-left: 50px;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  opacity: 0.5;
+}

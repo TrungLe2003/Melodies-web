@@ -1,0 +1,91 @@
+div.ArtistManagePage {
+  width: 100%;
+  color: white;
+  display: flex;
+  flex-direction: row;
+}
+
+/*  */
+
+div.ArtistManagePage div.menuFrame {
+  position: fixed; /* Đảm bảo menu cố định */
+  top: 0;
+  left: 0;
+  height: 100vh; /* Chiều cao chiếm toàn màn hình */
+  width: 150px;
+  background: linear-gradient(
+    to top,
+    rgb(119, 110, 110),
+    #454545,
+    #242424,
+    #202020
+  );
+  padding: 20px;
+  padding-top: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  z-index: 1; /* Đảm bảo nó luôn ở trên */
+}
+
+div.ArtistManagePage div.menuFrame div.frame {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  transition: 0.5s;
+  width: 150px;
+  padding: 5px;
+  background-color: inherit;
+  border: 1px solid white;
+}
+
+div.ArtistManagePage div.menuFrame div.frame:hover {
+  border: 1px solid rgb(240, 13, 138);
+  color: rgb(240, 13, 138);
+  background-color: #454545;
+}
+
+/*  */
+
+div.ArtistManagePage div.rightFrame {
+  width: 100%;
+  margin-left: 150px; /* Đẩy nội dung chính sang phải bằng với chiều rộng của menu */
+}
+
+div.ArtistManagePage div.rightFrame div.content {
+  padding: 60px;
+  padding-left: 90px;
+}
+
+div.ArtistManagePage div.rightFrame div.header {
+  width: 100%;
+  height: 90px;
+  background-color: #242424;
+  background: linear-gradient(
+    to left,
+    rgb(119, 110, 110),
+    #454545,
+    #242424,
+    #202020
+  );
+  padding: 20px;
+  box-sizing: border-box;
+  padding-left: 50px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+div.ArtistManagePage div.rightFrame div.header div.title div.logo {
+  font-size: 30px;
+  font-weight: bold;
+  background: linear-gradient(to right, rgb(240, 13, 138), blue);
+  background-clip: text; /* Cho trình duyệt khác ngoài WebKit */
+  -webkit-background-clip: text; /* Cho trình duyệt WebKit */
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  background-size: 100%;
+  width: 130px;
+}

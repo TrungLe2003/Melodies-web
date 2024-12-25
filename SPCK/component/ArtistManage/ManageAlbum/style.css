@@ -1,0 +1,349 @@
+div.ArtistManageAlbumPage {
+  color: white;
+}
+
+div.ArtistManageAlbumPage div.line {
+  border: 2px solid gray;
+  opacity: 0.6;
+  margin-bottom: 80px;
+}
+
+div.ArtistManageAlbumPage h2 {
+  margin-bottom: 30px;
+}
+
+div.ArtistManageAlbumPage div.albumList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+div.ArtistManageAlbumPage div.albumList div.frame {
+  display: flex;
+  flex-direction: row;
+  width: 1000px;
+  gap: 20px;
+  padding: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+div.ArtistManageAlbumPage div.albumList div.frame div.count {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+div.ArtistManageAlbumPage div.albumList div.frame div.albumFrame {
+  width: 700px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px 40px 5px 5px;
+  align-items: center;
+  border-radius: 5px;
+  background-color: #1a1414;
+  font-size: 18px;
+  position: relative;
+}
+
+div.ArtistManageAlbumPage div.albumList div.frame div.albumFrame img {
+  width: 50px;
+  height: 50px;
+}
+
+div.ArtistManageAlbumPage div.albumList div.frame div.actionFrame {
+  display: flex;
+  flex-direction: row;
+  padding-left: 20px;
+  border-left: 2px solid black;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  position: relative;
+}
+
+/*  */
+div.ArtistManageAlbumPage div.albumList div.frame div.actionFrame div.btn {
+  border: 1px solid rgb(206, 192, 192);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
+  background-color: #454545;
+  font-size: 30px;
+  transition: 0.5s;
+}
+
+div.ArtistManageAlbumPage
+  div.albumList
+  div.frame
+  div.actionFrame
+  div.AddSongBtn {
+  height: 35px;
+  width: 100px;
+  font-size: 20px;
+}
+
+div.ArtistManageAlbumPage
+  div.albumList
+  div.frame
+  div.actionFrame
+  div.AddSongBtn:hover {
+  background-color: rgb(61, 61, 214);
+}
+
+div.ArtistManageAlbumPage
+  div.albumList
+  div.frame
+  div.actionFrame
+  div.deleteAlbum:hover {
+  background-color: rgb(235, 89, 79);
+}
+
+div.ArtistManageAlbumPage div.AddmoreAlbum {
+  font-weight: 600;
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  flex-direction: column;
+  width: 100%;
+}
+
+div.ArtistManageAlbumPage div.AddmoreAlbum div.btnAdd {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border: 2px solid white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  transition: 0.5s;
+}
+
+div.ArtistManageAlbumPage div.AddmoreSong div.btnAdd:hover {
+  color: blue;
+  border: 2px solid blue;
+}
+
+/*  */
+div.uploadForm {
+  background-color: inherit;
+  margin-top: 20px;
+  width: 660px;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  border: 2px solid gray;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+div.uploadForm div.frame {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+div.uploadForm div.frame label {
+  font-weight: bold;
+  background: linear-gradient(to right, rgb(240, 13, 138), blue);
+  background-clip: text; /* Cho trình duyệt khác ngoài WebKit */
+  -webkit-background-clip: text; /* Cho trình duyệt WebKit */
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  background-size: 100%;
+  width: 600px;
+}
+
+div.uploadForm div.frame input {
+  height: 40px;
+  padding: 5px;
+  background-color: inherit;
+  color: white;
+}
+
+/*  */
+div.ArtistManageAlbumPage div.uploadForm div.frame input[type="file"] {
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+/* Thay đổi khi hover */
+div.ArtistManageAlbumPage div.uploadForm div.frame input[type="file"]:hover {
+  background-color: #777676;
+}
+
+/* Tùy chỉnh khi đã chọn file */
+div.ArtistManageAlbumPage
+  div.uploadForm
+  div.frame
+  input[type="file"]::-webkit-file-upload-button {
+  border: 2px dashed #7606a4;
+  background-color: inherit;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+div.ArtistManageAlbumPage div.uploadForm button {
+  width: 300px;
+  height: 40px;
+  border-radius: 10px;
+  padding: 5px 20px;
+  position: relative;
+  left: 150px;
+  background-color: inherit;
+  color: whitesmoke;
+  font-weight: 600;
+  font-size: 16px;
+  border: 2px solid white;
+  transition: 0.5s;
+}
+
+div.ArtistManageAlbumPage div.uploadForm button:hover {
+  border: 2px solid #f32ebc;
+  color: #f32ebc;
+}
+
+/* addSongtoAlbumFrame */
+div.ArtistManageAlbumPage div.albumList div.addSongtoAlbumFrame {
+  position: absolute;
+  background-color: #1a1414;
+  right: 0px;
+  top: -200px;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  width: 270px;
+  gap: 30px;
+  border-radius: 10px;
+  border: 2px solid rgb(240, 13, 138);
+}
+div.ArtistManageAlbumPage
+  div.albumList
+  div.addSongtoAlbumFrame
+  div.onCloseAddSongtoAlbumFrame {
+  position: absolute;
+  right: 20px;
+}
+
+div.ArtistManageAlbumPage div.albumList div.addSongtoAlbumFrame div.songList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 40px;
+  max-height: 300px; /* Chiều cao cố định cho khung */
+  overflow-y: auto; /* Bật thanh cuộn dọc */
+  padding: 10px;
+}
+
+div.ArtistManageAlbumPage
+  div.albumList
+  div.addSongtoAlbumFrame
+  .songList::-webkit-scrollbar {
+  width: 8px;
+}
+
+div.ArtistManageAlbumPage
+  div.albumList
+  div.addSongtoAlbumFrame
+  .songList::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+div.ArtistManageAlbumPage
+  div.albumList
+  div.addSongtoAlbumFrame
+  .songList::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+div.ArtistManageAlbumPage
+  div.albumList
+  div.addSongtoAlbumFrame
+  .songList::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+div.ArtistManageAlbumPage div.addSongtoAlbumFrame div.songList div.songFrame {
+  display: flex;
+  flex-direction: row;
+  width: 200px;
+  gap: 20px;
+  border-radius: 10px;
+  background-color: #0e1920;
+  padding: 10px;
+  overflow: hidden;
+  height: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  box-sizing: border-box;
+  min-height: 50px;
+}
+
+div.ArtistManageAlbumPage
+  div.addSongtoAlbumFrame
+  div.songList
+  div.songFrame
+  img {
+  height: 50px;
+  width: 50px;
+  border-radius: 10px;
+}
+
+div.ArtistManageAlbumPage div.addSongtoAlbumFrame div.actionAddToAlbum {
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+  align-items: center;
+  gap: 30px;
+  font-size: 16px;
+}
+
+div.ArtistManageAlbumPage div.addSongtoAlbumFrame div.actionAddToAlbum button {
+  height: 40px;
+  width: 80px;
+  background-color: inherit;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  border: 2px solid white;
+  transition: 0.5s;
+}
+
+div.ArtistManageAlbumPage
+  div.addSongtoAlbumFrame
+  div.actionAddToAlbum
+  button:hover {
+  border: 2px solid #7606a4;
+  color: #7606a4;
+}
+
+div.ArtistManageAlbumPage
+  div.addSongtoAlbumFrame
+  div.actionAddToAlbum
+  div.choosenSong {
+  border: 1px dashed white;
+  height: 40px;
+  box-sizing: border-box;
+  padding: 3px;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to right, rgb(240, 13, 138), blue);
+  background-clip: text; /* Cho trình duyệt khác ngoài WebKit */
+  -webkit-background-clip: text; /* Cho trình duyệt WebKit */
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  background-size: 100%;
+}

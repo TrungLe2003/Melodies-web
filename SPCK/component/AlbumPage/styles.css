@@ -1,0 +1,216 @@
+div.albumPage {
+  padding: 40px 60px;
+  color: white;
+}
+
+div.albumPage div.albumFrame {
+  background-color: #1a1414;
+  width: 100%;
+  padding-bottom: 50px;
+  border-radius: 20px;
+  background: linear-gradient(to bottom, #062b48, #1a1414);
+}
+
+div.albumPage div.albumFrame div.albumHeaderFrame {
+  width: 100%;
+  height: 400px;
+  background-color: #062b48;
+  padding: 50px;
+  box-sizing: border-box;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+div.albumPage div.albumFrame div.albumHeaderFrame div.albumImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+div.albumPage div.albumFrame div.albumHeaderFrame div.albumImg img {
+  height: 300px;
+  width: 300px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+div.albumPage div.albumFrame div.albumHeaderFrame div.someAlbumInfromation {
+  display: flex;
+  justify-content: end;
+
+  flex-direction: column;
+}
+
+div.albumPage
+  div.albumFrame
+  div.albumHeaderFrame
+  div.someAlbumInfromation
+  div.AlbumsName {
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 45px;
+}
+
+div.albumHeaderFrame div.someAlbumInfromation div.authorInforCount {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+div.albumHeaderFrame
+  div.someAlbumInfromation
+  div.authorInforCount
+  div.authorInfor {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+div.albumHeaderFrame
+  div.someAlbumInfromation
+  div.authorInforCount
+  div.authorInfor
+  img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+/* actionFrame */
+div.albumFrame div.actionFrame {
+  padding: 30px 50px;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* background: linear-gradient(to bottom, #062b48, #1a1414); */
+  /* tạo hiệu ứng chuyển màu dần cho div */
+  /* sau đặt biến màu ở đây */
+}
+
+div.albumFrame div.actionFrame div.actionFrameLeft {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  width: 400px;
+  align-items: center;
+}
+
+div.albumFrame div.actionFrame div.actionFrameLeft div.btnPlay {
+  background-color: #f32ebc;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border-radius: 50%;
+}
+
+div.albumFrame div.actionFrame div.actionFrameLeft div.btnAddToPlaylist {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border: 2px solid white;
+  font-size: 40px;
+}
+
+div.actionFrame div.actionFrameLeft div.checkMore {
+  font-size: 40px;
+  width: 40px;
+  height: 40px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div.albumFrame div.actionFrame div.actionFrameRight {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+div.albumFrame div.actionFrame div.actionFrameRight div {
+  font-size: 20px;
+}
+
+div.albumFrame div.albumListFrame {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 30px 50px;
+}
+
+div.albumFrame div.albumListFrame div.noteFrame {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 105px;
+  padding-left: 255px;
+}
+
+div.albumFrame div.albumListFrame div.line {
+  border: 1px solid;
+  opacity: 0.4;
+}
+
+div.albumFrame div.albumListFrame div.musicFrame {
+  display: flex;
+  width: 100%;
+  gap: 40px;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+div.albumFrame div.albumListFrame div.musicFrame div.musicCount {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  padding-left: 10px;
+}
+
+div.releaseTime {
+  margin-left: 50px;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  opacity: 0.5;
+}
+
+/* moreArtistsAlbum */
+div.albumFrame div.moreArtistsAlbum {
+  padding: 20px 50px;
+}
+
+div.albumFrame div.moreArtistsAlbum h2 {
+  margin-bottom: 20px;
+}
+
+div.albumFrame div.moreArtistsAlbum h2 span {
+  color: blue;
+}
+
+div.albumFrame div.moreArtistsAlbum div.moreArtistsAlbumList {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+/*  */
+div.albumFrameBottom {
+  margin-left: 50px;
+  margin-top: 50px;
+  opacity: 0.5;
+}

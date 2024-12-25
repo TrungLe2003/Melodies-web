@@ -1,0 +1,80 @@
+div.uploadForm {
+  background-color: inherit;
+  margin-top: 20px;
+  width: 660px;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  border: 2px solid gray;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+div.uploadForm div.frame {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+div.uploadForm div.frame label {
+  font-weight: bold;
+  background: linear-gradient(to right, rgb(240, 13, 138), blue);
+  background-clip: text; /* Cho trình duyệt khác ngoài WebKit */
+  -webkit-background-clip: text; /* Cho trình duyệt WebKit */
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  background-size: 100%;
+  width: 250px;
+}
+
+div.uploadForm div.frame input {
+  height: 40px;
+  padding: 5px;
+  background-color: inherit;
+  color: white;
+}
+
+/*  */
+div.uploadForm div.frame input[type="file"] {
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+/* Thay đổi khi hover */
+div.uploadForm div.frame input[type="file"]:hover {
+  background-color: #777676;
+}
+
+/* Tùy chỉnh khi đã chọn file */
+div.uploadForm div.frame input[type="file"]::-webkit-file-upload-button {
+  border: 2px dashed #7606a4;
+  background-color: inherit;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+div.uploadForm button {
+  width: 300px;
+  height: 40px;
+  border-radius: 10px;
+  padding: 5px 20px;
+  position: relative;
+  left: 150px;
+  background-color: inherit;
+  color: whitesmoke;
+  font-weight: 600;
+  font-size: 16px;
+  border: 2px solid white;
+  transition: 0.5s;
+}
+
+div.uploadForm button:hover {
+  border: 2px solid #f32ebc;
+  color: #f32ebc;
+}

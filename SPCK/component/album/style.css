@@ -1,0 +1,28 @@
+div.album1 {
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  width: 200px;
+  height: 250px;
+  padding-bottom: 10px;
+  color: white;
+}
+
+div.album1 img {
+  width: 100%;
+  height: 150px;
+  border-radius: 10px;
+}
+
+div.album1 div.nameAlbum-author {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  margin-top: 20px;
+}
+
+div.album1 div.nameAlbum-author div.author {
+  font-size: 14px;
+  opacity: 50%;
+}

@@ -1,0 +1,456 @@
+div.ProfileUserPage {
+  padding: 40px 60px;
+  color: white;
+  z-index: 0;
+}
+
+div.ProfileUserPage div.ProfileFrame {
+  background-color: #242424;
+  width: 100%;
+  padding-bottom: 50px;
+  border-radius: 20px;
+  z-index: 0;
+  box-sizing: border-box;
+  background: linear-gradient(to top, #454545, #242424);
+}
+
+/*  */
+div.ProfileUserPage div.ProfileFrame div.profileHeaderFrame {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  width: 100%;
+  height: 300px;
+  background-color: #454545;
+  padding-top: 80px;
+  padding-left: 80px;
+  padding-bottom: 40px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+div.ProfileUserPage div.ProfileFrame div.profileHeaderFrame div.avaFrame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #242424;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  box-shadow: 0 0 100px 2px rgba(0, 0, 0, 0.5);
+}
+
+div.ProfileUserPage div.ProfileFrame div.profileHeaderFrame div.avaFrame img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+div.ProfileUserPage div.ProfileFrame div.profileHeaderFrame div.title {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+div.ProfileUserPage
+  div.ProfileFrame
+  div.profileHeaderFrame
+  div.title
+  div.userName {
+  font-size: 60px;
+  font-weight: 600;
+}
+
+/*  */
+div.ProfileUserPage div.actionFrame {
+  margin-top: 30px;
+  padding: 30px 50px 0px 50px;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+  /* align-items: center; */
+}
+
+div.ProfileUserPage div.actionFrame div.actionFrameRight div {
+  border-bottom: 2px solid inherit;
+}
+
+div.ProfileUserPage div.actionFrame div.actionFrameRight div:hover {
+  border-bottom: 2px solid white;
+}
+
+div.ProfileUserPage div.actionFrame div.actionFrameLeft div.checkMoreFrame {
+  position: absolute;
+  background-color: #282828;
+  width: 200px;
+  z-index: 10;
+  top: 100px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+div.ProfileUserPage
+  div.actionFrame
+  div.actionFrameLeft
+  div.checkMoreFrame
+  div.row {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  height: 40px;
+  border: 1px solid #282828;
+  border-radius: 5px;
+  padding: 5px;
+  transition: 0.5s;
+}
+
+div.ProfileUserPage
+  div.actionFrame
+  div.actionFrameLeft
+  div.checkMoreFrame
+  div.row:hover {
+  background-color: rgb(116, 111, 111);
+}
+
+/* SettingModel */
+div.SettingModel {
+  position: fixed;
+  z-index: 10;
+  width: 100vw;
+  min-height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: #00000030;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div.SettingModel div.SettingModelFrame {
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 350px;
+  background-color: #282828;
+  padding: 24px;
+  justify-content: space-between;
+  gap: 20px;
+}
+div.SettingModel div.SettingModelFrame div.ModelHeading {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+div.SettingModel div.SettingModelFrame div.ModelHeading div.title {
+  font-weight: 600;
+  font-size: 28px;
+  background: linear-gradient(to right, rgb(240, 13, 138), blue);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  background-size: 100%;
+}
+
+div.SettingModel div.SettingModelFrame div.ModelHeading div.btnCloseMd {
+  font-size: 20px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 1px solid #282828;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div.SettingModel div.SettingModelFrame div.ModelHeading div.btnCloseMd:hover {
+  background-color: #353434;
+}
+
+div.SettingModel div.SettingModelFrame div.changeSettingFrame {
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+}
+
+div.SettingModel
+  div.SettingModelFrame
+  div.changeSettingFrame
+  div.ChangeAvaframe {
+  background-color: #282828;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  flex-direction: column;
+  border-radius: 50%;
+  gap: 20px;
+  box-shadow: 0 0 100px 20px rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+}
+
+div.SettingModel div.changeSettingFrame div.ChangeAvaframe div {
+  font-size: 12px;
+  opacity: 0.5;
+  transition: 0.5;
+}
+
+div.SettingModel div.changeSettingFrame div.ChangeAvaframe div:hover {
+  opacity: 1;
+  background: linear-gradient(to right, rgb(240, 13, 138), blue);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  background-size: 100%;
+}
+
+/* Tùy chỉnh giao diện cho nút upload */
+div.SettingModel div.changeSettingFrame div.ChangeAvaframe div.changeAva {
+  font-size: 12px;
+  text-align: center;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 0.3s ease, background 0.5s ease;
+}
+
+/* Hiệu ứng hover */
+div.SettingModel div.changeSettingFrame div.ChangeAvaframe div.changeAva:hover {
+  opacity: 1;
+  background: linear-gradient(to right, #f00d8a, #00f);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/*  */
+div.SettingModel div.changeSettingFrame div.changeMoreDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 300px;
+  position: relative;
+}
+
+div.SettingModel
+  div.changeSettingFrame
+  div.changeMoreDetails
+  input.detailsFrame {
+  height: 30px;
+  background-color: #3b3b3b;
+  padding: 5px 10px 5px 10px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+}
+
+div.SettingModel div.changeSettingFrame div.changeMoreDetails button {
+  background-color: #7606a4;
+  color: white;
+  border: none;
+  position: absolute;
+  width: 100px;
+  height: 40px;
+  border-radius: 50px;
+  top: 180px;
+  right: 0px;
+  box-shadow: 0 0 100px 20px rgba(0, 0, 0, 0.5);
+}
+
+div.SettingModel div.changeSettingFrame div.changeMoreDetails button:hover {
+  opacity: 0.8;
+}
+
+div.ModelBottom {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+div.ModelBottom p {
+  font-size: 16px;
+}
+
+/* uploadSong */
+
+div.UploadSong {
+  margin-left: 50px;
+  margin-right: 50px;
+  /* margin-top: 30px; */
+}
+
+div.UploadSong div.title {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+}
+
+div.UploadSong div.title h2 span {
+  color: #f32ebc;
+}
+
+/* artistNavigation */
+div.artistNavigation {
+  margin: 80px 50px;
+  width: 700px;
+}
+
+div.artistNavigation div.EditMyArtistPage {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  border: 2px solid gray;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+div.artistNavigation div.EditMyArtistPage div.frame {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+div.artistNavigation div.EditMyArtistPage div.frame label.title {
+  font-weight: bold;
+  background: linear-gradient(to right, rgb(240, 13, 138), blue);
+  background-clip: text; /* Cho trình duyệt khác ngoài WebKit */
+  -webkit-background-clip: text; /* Cho trình duyệt WebKit */
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  background-size: 100%;
+  width: 250px;
+}
+
+div.artistNavigation div.EditMyArtistPage div.frame input {
+  height: 40px;
+  padding: 5px;
+  background-color: inherit;
+  color: white;
+}
+
+div.artistNavigation h2 span {
+  color: blue;
+}
+
+/*  */
+div.artistNavigation div.EditMyArtistPage input[type="file"] {
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 5px;
+  color: transparent; /* Để ẩn tên tệp */
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+/* Thay đổi khi hover */
+div.artistNavigation div.EditMyArtistPage input[type="file"]:hover {
+  background-color: #777676;
+}
+
+/* Tùy chỉnh khi đã chọn file */
+div.artistNavigation
+  div.EditMyArtistPage
+  input[type="file"]::-webkit-file-upload-button {
+  border: 2px dashed #7606a4;
+  background-color: inherit;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+div.artistNavigation
+  div.EditMyArtistPage
+  input[type="file"]::-webkit-file-upload-button:hover {
+  background-color: ;
+}
+
+div.artistNavigation div.EditMyArtistPage button {
+  width: 300px;
+  height: 40px;
+  border-radius: 10px;
+  padding: 5px 20px;
+  position: relative;
+  left: 150px;
+  background-color: inherit;
+  color: whitesmoke;
+  font-weight: 600;
+  font-size: 16px;
+  border: 2px solid white;
+  transition: 0.5s;
+}
+
+div.artistNavigation div.EditMyArtistPage button:hover {
+  border: 2px solid #f32ebc;
+  color: #f32ebc;
+}
+
+/* BecomeArtistFrame */
+
+div.JoinUs-frame {
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+div.JoinUs-frame h2 {
+  font-size: 35px;
+  font-weight: bold;
+  background: linear-gradient(to right, rgb(240, 13, 138), BLUE);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  background-size: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.JoinUs-frame div.title2 {
+  font-size: 30px;
+  color: #1a1414;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.JoinUs-frame button.sign-up-btn2 {
+  width: 240px;
+  margin-top: 20px;
+  height: 50px;
+  background-color: #f32ebc;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}
+
+/*  */
+div.ProfileUserPage div.ProfileFrame div.manageYourSong {
+  margin-left: 50px;
+  font-size: 18px;
+  border-bottom: 1px solid inherit;
+  width: 165px;
+}
+div.ProfileUserPage div.ProfileFrame div.manageYourSong:hover {
+  border-bottom: 1px solid white;
+}

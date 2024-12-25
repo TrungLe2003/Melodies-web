@@ -1,0 +1,107 @@
+div.AccountPage {
+  color: #2a3563;
+}
+
+/* header */
+div.AccountPage div.header {
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+div.AccountPage div.header div.logo {
+  font-size: 30px;
+  font-weight: bold;
+  background: linear-gradient(to right, rgb(240, 13, 138), blue);
+  background-clip: text; /* Cho trình duyệt khác ngoài WebKit */
+  -webkit-background-clip: text; /* Cho trình duyệt WebKit */
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  background-size: 100%;
+}
+/* content */
+
+div.AccountPage div.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px;
+}
+
+div.AccountPage div.content div.CategoryFrame {
+  background-color: #f86263;
+  width: 700px;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+div.AccountPage div.content div.CategoryFrame h2 {
+  margin-bottom: 10px;
+}
+
+div.AccountPage div.content div.CategoryFrame div.frameRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+div.AccountPage div.frameRow .titleFrame {
+  position: relative;
+  z-index: 2;
+}
+
+div.AccountPage div.frameRow div.toPage {
+  position: relative;
+  z-index: 2;
+}
+
+div.AccountPage div.frameRow::after {
+  content: "";
+  position: absolute;
+  /* top: 0; */
+  left: 50%; /* Bắt đầu ở giữa div */
+  transform: translateX(-50%);
+  width: 95%;
+  height: 0%;
+  background-color: #fff1c2;
+  z-index: 1;
+  transition: width 0.5s ease-in-out; /* Tăng width từ giữa ra hai bên */
+  opacity: 0;
+}
+
+div.AccountPage div.frameRow:hover::after {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+
+div.AccountPage div.content div.CategoryFrame div.frameRow div.titleFrame {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+}
+
+div.AccountPage div.frameRow div.titleFrame div.iconFrame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  /* background-color: #9794c9; */
+  padding: 3px;
+}
+
+div.AccountPage div.content div.CategoryFrame div.frameRow div.toPage button {
+  background-color: inherit;
+  border: none;
+  font-size: 18px;
+}

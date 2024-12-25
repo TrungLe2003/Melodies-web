@@ -1,0 +1,469 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+div.App {
+  /* background-color: #412c3a; */
+  background-color: #293462;
+  background-color: #2a3563;
+  width: 100%;
+  min-height: 100vh;
+  /* padding-bottom: 60px; */
+}
+/*  */
+
+div.MP-header {
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+div.MP-header div.hd-nameApp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+div.nameApp {
+  font-size: 30px;
+  font-weight: bold;
+  background: linear-gradient(to right, rgb(240, 13, 138), blue);
+  background-clip: text; /* Cho trình duyệt khác ngoài WebKit */
+  -webkit-background-clip: text; /* Cho trình duyệt WebKit */
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  background-size: 100%;
+}
+
+/*  */
+
+div.MP-header-frame2 {
+  display: flex;
+  justify-content: space-around;
+  width: 600px;
+  box-sizing: border-box;
+}
+
+div.MP-header-frame2 div.searchMusicFrame {
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+div.MP-header-frame2 div.searchMusicFrame input.Find-Music {
+  background-color: inherit;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border: 2px solid #f86263;
+  width: 200px;
+  color: #635757;
+  padding: 10px 20px;
+  outline: none;
+}
+
+div.MP-header-frame2 div.searchMusicFrame input.Find-Music:focus {
+  color: #fff1c2;
+}
+
+div.MP-header-frame2 div.searchMusicFrame button {
+  background-color: #f86263;
+  cursor: pointer;
+  border: none;
+  height: 39px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 39px;
+}
+
+/*  */
+div.MP-header-frame2 div {
+  color: #fff1c2;
+
+  font-size: 18px;
+  transition: 0.5s;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+div.MP-header-frame2 div:hover {
+  /* border-bottom: 1px solid #f32ebc; */
+}
+
+/*  */
+div.MP-header div.frame-signUp-in {
+  display: flex;
+  justify-content: space-around;
+  width: 180px;
+  gap: 10px;
+  position: relative;
+}
+
+div.MP-header div.frame-signUp-in button {
+  width: 100px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+div.MP-header div.frame-signUp-in button.signin-btn {
+  background-color: #1a1414;
+  color: #f32ebc;
+  border: none;
+}
+
+div.MP-header div.frame-signUp-in button.signup-btn {
+  background-color: #f32ebc;
+  border: none;
+  position: relative;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}
+/* SignIn successful frame */
+div.SI-successful {
+  display: flex;
+  color: white;
+  gap: 10px;
+}
+
+div.SI-successful div.avaUser {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid gray;
+  border-radius: 50%;
+  position: relative;
+}
+
+div.SI-successful div.avaUser div.emailUser {
+  position: absolute;
+  background-color: #0e1920;
+  padding: 5px;
+  border-radius: 5px;
+  top: 45px;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+div.SI-successful div.avaUser:hover div.emailUser {
+  opacity: 1;
+}
+
+/* MP-banner */
+
+div.MP-banner {
+  padding: 20px 60px;
+  position: relative;
+}
+
+div.MP-banner img {
+  width: 100%;
+}
+
+div.MP-banner-frame {
+  position: absolute;
+  background-color: #0e1920;
+  top: 70px;
+  left: 130px;
+  width: 350px;
+  color: white;
+  padding: 20px 30px;
+}
+
+div.MP-banner-frame h2 {
+  margin-bottom: 20px;
+}
+
+/*  */
+div.MainPMusic-content {
+  padding: 0px 60px;
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+div.MainPMusic-content h1 {
+  font-size: 35px;
+  font-weight: bold;
+  background: linear-gradient(to right, rgb(240, 13, 138), BLUE);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  background-size: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.MainPMusic-content div.frame-trendingMusic-auto-scrolling {
+  width: 100%;
+  height: var(--height);
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent, #000 10% 90%, transparent);
+}
+
+div.MainPMusic-content
+  div.frame-trendingMusic-auto-scrolling
+  div.auto-scrolling-listMusic {
+  display: flex;
+  width: 100%;
+  min-width: calc(var(--width) * var(--quantity));
+}
+
+div.MainPMusic-content
+  div.frame-trendingMusic-auto-scrolling
+  div.auto-scrolling-listMusic
+  div.item {
+  position: absolute;
+  animation: autoRun 10s linear infinite;
+  height: 100%;
+  width: 100px;
+  left: 100%;
+  animation-delay: calc((10s / var(--quantity)) * (var(--position) - 1));
+  transition: filter 3.5;
+}
+
+div.MainPMusic-content
+  div.frame-trendingMusic-auto-scrolling
+  div.auto-scrolling-listMusic
+  div.item
+  img {
+  width: 200px;
+  height: 200px;
+}
+
+@keyframes autoRun {
+  from {
+    left: 100%;
+  }
+  to {
+    left: calc(var(--width) * -1);
+  }
+}
+
+div.MainPMusic-content
+  div.frame-trendingMusic-auto-scrolling
+  div.auto-scrolling-listMusic:hover
+  div.item {
+  animation-play-state: paused !important;
+  filter: grayscale(1);
+}
+div.MainPMusic-content
+  div.frame-trendingMusic-auto-scrolling
+  div.auto-scrolling-listMusic
+  div.item:hover {
+  filter: grayscale(0);
+}
+
+div.MainPMusic-content div.trending-music h2 {
+  color: white;
+  margin-bottom: 20px;
+}
+
+div.MainPMusic-content div.trending-music h2 span {
+  color: #f32ebc;
+}
+
+/*  */
+div.trendingMusic-frame-listMusic {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+div.trendingMusic-frame-listMusic div.line {
+  border: 2px solid rgb(133, 133, 146);
+}
+
+div.musicTrending-frame-menu {
+  height: 40px;
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: px;
+  padding: 0px;
+}
+
+div.musicTrending-frame-menu div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*  */
+
+div.newRelease-Music {
+  margin-top: 40px;
+}
+
+div.newRelease-Music h2 {
+  color: white;
+  margin-bottom: 20px;
+}
+
+div.newRelease-Music h2 span {
+  color: #f32ebc;
+}
+
+div.newRelease-Music div.newRelease-Music-list {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+/* Artist Recommed */
+
+div.recommendArtist {
+  margin-top: 40px;
+}
+
+div.recommendArtist h2 {
+  color: white;
+  margin-bottom: 20px;
+}
+
+div.recommendArtist h2 span {
+  color: #f32ebc;
+}
+
+div.recommendArtist div.recommendArtist-list {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+div.recommendArtist div.recommendArtist-list:hover div.item:not(:hover) {
+  filter: blur(8px);
+}
+
+/*  top album  */
+
+div.top-album {
+  margin-top: 40px;
+}
+
+div.top-album h2 {
+  color: white;
+  margin-bottom: 20px;
+}
+
+div.top-album h2 span {
+  color: blue;
+}
+
+div.top-album div.top-albumList {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+/*  */
+
+div.JoinUs-frame {
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+div.JoinUs-frame h2 {
+  font-size: 35px;
+  font-weight: bold;
+  background: linear-gradient(to right, rgb(240, 13, 138), BLUE);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  background-size: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.JoinUs-frame div.title1 {
+  font-size: 30px;
+
+  color: #1a1414;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.JoinUs-frame button.sign-up-btn2 {
+  width: 240px;
+  margin-top: 20px;
+  height: 50px;
+  background-color: #f32ebc;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}
+
+div.JoinUs-frame div.sign-in-btn2-frame {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 300px;
+  margin-top: 8px;
+  align-items: center;
+}
+
+div.JoinUs-frame div.sign-in-btn2-frame div {
+  font-size: 17px;
+}
+
+div.JoinUs-frame div.sign-in-btn2-frame button {
+  background-color: inherit;
+  border: 1px solid #f32ebc;
+  color: #f32ebc;
+  height: 40px;
+  width: 100px;
+}
+
+/*  */
+div.footer {
+  padding: 20px 60px 60px 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: white;
+}
+
+div.footer div.AboutUs {
+  width: 400px;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+
+div.footer div.footerColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+div.footer div.footerColumn div.line {
+  border: 1px solid white;
+}
+
+div.footer div.footer-logo {
+  display: flex;
+  align-items: center;
+}

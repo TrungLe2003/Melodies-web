@@ -1,0 +1,247 @@
+div.ArtistManageSongPage {
+  color: white;
+}
+
+div.ArtistManageSongPage div.line {
+  border: 2px solid gray;
+  opacity: 0.6;
+  margin-bottom: 80px;
+}
+
+div.ArtistManageSongPage h2 {
+  margin-bottom: 30px;
+}
+
+div.ArtistManageSongPage div.songList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+div.ArtistManageSongPage div.songList div.frame {
+  display: flex;
+  flex-direction: row;
+  width: 1000px;
+  gap: 20px;
+  padding: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+div.ArtistManageSongPage div.songList div.frame div.count {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+div.ArtistManageSongPage div.songList div.frame div.musicFrame {
+  width: 700;
+}
+
+div.ArtistManageSongPage div.songList div.frame div.actionFrame {
+  display: flex;
+  flex-direction: row;
+  padding-left: 20px;
+  border-left: 2px solid black;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  position: relative;
+}
+
+/*  */
+div.ArtistManageSongPage div.actionFrame div.EditMusicFrame {
+  position: absolute;
+  top: -300px;
+  right: 10px;
+  border: 2px solid rgb(240, 13, 138);
+  z-index: 10;
+  background-color: #242424;
+  width: 500px;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+div.ArtistManageSongPage
+  div.actionFrame
+  div.EditMusicFrame
+  div.closeEditMusicFrame {
+  position: absolute;
+  right: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.ArtistManageSongPage div.actionFrame div.EditMusicFrame h2 {
+  font-weight: bold;
+  background: linear-gradient(to right, rgb(240, 13, 138), blue);
+  background-clip: text; /* Cho trình duyệt khác ngoài WebKit */
+  -webkit-background-clip: text; /* Cho trình duyệt WebKit */
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  background-size: 100%;
+  font-size: 20px;
+}
+
+div.ArtistManageSongPage div.actionFrame div.EditMusicFrame div.frame2 {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+div.ArtistManageSongPage div.EditMusicFrame div.frame2 input {
+  height: 30px;
+  padding: 5px;
+  background-color: inherit;
+  color: white;
+}
+
+div.ArtistManageSongPage div.EditMusicFrame div.frame2 input[type="file"] {
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+div.ArtistManageSongPage
+  div.EditMusicFrame
+  div.frame2
+  input[type="file"]:hover {
+  background-color: #777676;
+}
+
+div.ArtistManageSongPage
+  div.EditMusicFrame
+  div.frame2
+  input[type="file"]::-webkit-file-upload-button {
+  border: 2px dashed #7606a4;
+  background-color: inherit;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+div.ArtistManageSongPage div.EditMusicFrame div.frame2 div.title {
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+div.ArtistManageSongPage div.EditMusicFrame div.frameBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.ArtistManageSongPage div.EditMusicFrame div.frameBtn button {
+  width: 120px;
+  height: 40px;
+  background-color: inherit;
+  border: 2px solid white;
+  color: white;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.5s;
+}
+
+div.ArtistManageSongPage div.EditMusicFrame div.frameBtn button:hover {
+  border: 2px solid rgb(229, 255, 0);
+  color: rgb(229, 255, 0);
+}
+
+/*  */
+div.ArtistManageSongPage div.actionFrame div.DeleteFrame {
+  position: absolute;
+  top: -90px;
+  right: 10px;
+  border: 2px solid rgb(240, 13, 138);
+  z-index: 10;
+  background-color: #242424;
+  width: 300px;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+div.ArtistManageSongPage div.actionFrame div.DeleteFrame div.title {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  box-sizing: border-box;
+}
+
+div.ArtistManageSongPage div.actionFrame div.DeleteFrame div.title div {
+  border-bottom: 1px solid inherit;
+}
+
+div.ArtistManageSongPage div.actionFrame div.DeleteFrame div.title div:hover {
+  border-bottom: 1px solid white;
+}
+
+/*  */
+div.ArtistManageSongPage div.songList div.frame div.actionFrame div.btn {
+  border: 1px solid rgb(206, 192, 192);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
+  background-color: #454545;
+  font-size: 30px;
+  transition: 0.5s;
+}
+
+div.ArtistManageSongPage
+  div.songList
+  div.frame
+  div.actionFrame
+  div.editSong:hover {
+  background-color: rgb(61, 61, 214);
+}
+
+div.ArtistManageSongPage
+  div.songList
+  div.frame
+  div.actionFrame
+  div.deleteSong:hover {
+  background-color: rgb(235, 89, 79);
+}
+
+div.ArtistManageSongPage div.AddmoreSong {
+  font-weight: 600;
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  flex-direction: column;
+  width: 100%;
+}
+
+div.ArtistManageSongPage div.AddmoreSong div.btnAdd {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border: 2px solid white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  transition: 0.5s;
+}
+
+div.ArtistManageSongPage div.AddmoreSong div.btnAdd:hover {
+  color: blue;
+  border: 2px solid blue;
+}

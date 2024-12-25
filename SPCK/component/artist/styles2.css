@@ -1,0 +1,26 @@
+div.ArtistFrame1 {
+  font-weight: 600;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  gap: 30px;
+  align-items: center;
+  margin-left: 50px;
+  width: 1100px;
+
+  padding: 10px;
+  border-radius: 10px;
+}
+
+div.ArtistFrame1:hover {
+  background-color: gray;
+}
+
+div.ArtistFrame1 img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+div.ArtistFrame1 div.content {
+}

@@ -1,0 +1,96 @@
+div.signInP {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  color: white;
+}
+div.signInP img {
+  width: 100%;
+  filter: grayscale(0.4);
+}
+
+div.signInP div.form-signIn {
+  position: absolute;
+  background-color: #412c3a;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px;
+  border-radius: 20px;
+  left: 35%;
+  top: 5%;
+}
+
+div.signInP div.form-signIn h1 {
+  font-size: 40px;
+  font-weight: 550;
+  background: linear-gradient(to right, rgb(240, 13, 138), blue);
+  background-clip: text; /* Cho trình duyệt khác ngoài WebKit */
+  -webkit-background-clip: text; /* Cho trình duyệt WebKit */
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  background-size: 100%;
+}
+
+div.signInP div.form-signIn div.wcBack {
+  margin-top: 10px;
+}
+
+div.signInP div.form-signIn form {
+  margin-top: 20px;
+}
+
+div.signInP div.form-signIn form input {
+  width: 350px;
+  height: 45px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  padding-left: 20px;
+  background-color: #612c4f;
+  border: none;
+  color: white;
+}
+
+div.signInP div.form-signIn form button.submitBtn {
+  width: 350px;
+  height: 45px;
+  border-radius: 50px;
+  background-color: #f32ebc;
+  color: white;
+  border: none;
+}
+
+div.signInP div.form-signIn div.otherSignin {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  width: 100%;
+  margin-top: 20px;
+  gap: 10px;
+  position: relative;
+}
+
+div.signInP div.form-signIn div.otherSignin div img {
+  height: 20px;
+  width: 20px;
+  position: relative;
+  top: 6px;
+  left: 80px;
+}
+
+div.signInP div.form-signIn div.otherSignin button {
+  width: 350px;
+  color: white;
+  height: 45px;
+  border-radius: 50px;
+  border: 2px solid #e5e7ef;
+  background-color: inherit;
+}
+
+div.signInP div.form-signIn p.text {
+  margin-top: 20px;
+}

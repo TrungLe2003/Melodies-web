@@ -1,0 +1,34 @@
+div.artist1 {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  position: relative;
+}
+
+div.artist1 img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  /* bảo đảm ảnh k bị vỡ khi zoom */
+  transition: 0.5s;
+}
+
+div.artist1 div.content {
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  padding: 20px;
+  color: #fff;
+  transform: translateY(40px);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+div.artist1:hover div.content {
+  opacity: 1;
+  transform: translate(0);
+}
+div.artist1:hover img {
+  transform: scale(1.2);
+}
