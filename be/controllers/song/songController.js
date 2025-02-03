@@ -246,6 +246,27 @@ const SongController = {
       });
     }
   },
+  //tách ra để dễ sửa
+  getNewestSongs: async (req, res) => {
+    try {
+      const { limit } = req.query;
+      const dataLimit = parseInt(limit) || 7;
+      const data = await SongModel.find({})
+        .sort({ createdAt: -1 })
+        .limit(dataLimit)
+        .populate("idArtist idAlbum");
+
+      res.status(200).send({
+        message: `Fetched newest songs successfully`,
+        data: data,
+      });
+    } catch (error) {
+      res.status(500).send({
+        message: error.message,
+        data: null,
+      });
+    }
+  },
   deletedSongById: async (req, res) => {
     const token = req.headers["authorization"]?.split(" ")[1];
     if (!token) throw new Error("No token provided");

@@ -50,7 +50,7 @@ const ArtistManageAlbumPage = () => {
 
     try {
       const response = await axios.post(
-        `http://localhost:8080/api/v1/album/createAlbum/${artistId}`, // Thay `artistId` bằng giá trị phù hợp
+        `http://localhost:8081/api/v1/album/createAlbum/${artistId}`, // Thay `artistId` bằng giá trị phù hợp
         formData,
         {
           headers: {
@@ -80,7 +80,7 @@ const ArtistManageAlbumPage = () => {
   const fetchAlbums = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:8080/api/v1/album/getAlbums?artistId=${artistId}`,
+        `http://localhost:8081/api/v1/album/getAlbums?artistId=${artistId}`,
         {
           headers: {
             Authorization: `Bearer ${accessToken}`,
@@ -91,7 +91,7 @@ const ArtistManageAlbumPage = () => {
       setAlbums(data);
 
       const songResponse = await axios.get(
-        `http://localhost:8080/api/v1/song/getSong?artistId=${artistId}`,
+        `http://localhost:8081/api/v1/song/getSong?artistId=${artistId}`,
         {
           headers: {
             Authorization: `Bearer ${accessToken}`,
@@ -110,7 +110,7 @@ const ArtistManageAlbumPage = () => {
   const handleAddSongToAlbum = async () => {
     try {
       const response = await axios.put(
-        `http://localhost:8080/api/v1/album/${selectedAlbumId}?songIdAdded=${selectedSongId}`,
+        `http://localhost:8081/api/v1/album/${selectedAlbumId}?songIdAdded=${selectedSongId}`,
         {},
         {
           headers: {
@@ -152,12 +152,14 @@ const ArtistManageAlbumPage = () => {
         {albums.map((album, index) => (
           <div className="frame" key={album._id}>
             <div className="count">{index + 1})</div>
-            <div
-              className="albumFrame"
-              onClick={() => nav(`/album/${album._id}`)}
-            >
+            <div className="albumFrame">
               <img src={album.albumImg} alt={`${album.albumName}`} />
-              <div className="albumName">{album.albumName}</div>
+              <div
+                className="albumName"
+                onClick={() => nav(`/album/${album._id}`)}
+              >
+                {album.albumName}
+              </div>
               <div>{new Date(album.createdAt).getFullYear()} album</div>
               {/*  */}
               {selectedAlbumId && (

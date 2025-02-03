@@ -29,7 +29,7 @@ const SignUpPage = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:8080/api/v1/user/register",
+        "http://localhost:8081/api/v1/user/register",
         {
           email,
           password,

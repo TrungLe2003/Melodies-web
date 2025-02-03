@@ -11,6 +11,7 @@ import axios from "axios";
 
 const HomePage = () => {
   const [someSong, setSomeSong] = useState(null); //hiển thị 1 số bài hát
+  const [newestSong, setNewestSong] = useState(null); // lấy 7 bài hát mới nhất
   const [someArtist, setSomeArtist] = useState(null); //hiển thị 1 số artist
   const [someAlbum, setSomeAlbum] = useState(null); //hiển thị 1 số album
   const accessToken = localStorage.getItem("accessToken") || null;
@@ -22,23 +23,28 @@ const HomePage = () => {
       try {
         // Lấy data album
         const responseAlbumData = await axios.get(
-          "http://localhost:8080/api/v1/album/getAllAlbums?limit=5"
+          "http://localhost:8081/api/v1/album/getAllAlbums?limit=5"
         );
         setSomeAlbum(responseAlbumData.data.data);
 
         // Lấy data artist
         const responseArtistData = await axios.get(
-          "http://localhost:8080/api/v1/artist/allArtist?limit=5"
+          "http://localhost:8081/api/v1/artist/allArtist?limit=5"
         );
         setSomeArtist(responseArtistData.data.data);
 
         // Lấy data song
         const responseSong = await axios.get(
-          `http://localhost:8080/api/v1/song/getAllSongs?limit=6`
+          `http://localhost:8081/api/v1/song/getAllSongs?limit=6`
         );
         // console.log("API Response for songs:", responseSong.data);
         setSomeSong(responseSong.data.data);
         console.log(someSong);
+        const responseNewestSong = await axios.get(
+          `http://localhost:8081/api/v1/song/getNewestSongs?limit=7`
+        );
+        setNewestSong(responseNewestSong.data.data);
+        console.log(newestSong);
       } catch (error) {
         console.error("Error fetching data:", error.message);
       }
@@ -65,7 +71,7 @@ const HomePage = () => {
         <h1>Hear what’s trending for free in the Melodies</h1>
         <div className="trending-music">
           <h2>
-            Trending Music on <span className="">Melodies</span>
+            New Music on <span className="">Melodies</span>
           </h2>
           <div
             className="frame-trendingMusic-auto-scrolling"
@@ -76,39 +82,18 @@ const HomePage = () => {
             }}
           >
             <div className="auto-scrolling-listMusic">
-              <div className="item" style={{ "--position": 1 }}>
-                <img src="./public/autoscrolling/cityLight.png" alt="" />
-              </div>
-              <div className="item" style={{ "--position": 2 }}>
-                <img
-                  src="./public/autoscrolling/Doses And Mimosas.png"
-                  alt=""
-                />
-              </div>
-              <div className="item" style={{ "--position": 3 }}>
-                <img src="./public/autoscrolling/GicoeHiatus.png" alt="" />
-              </div>
-              <div className="item" style={{ "--position": 4 }}>
-                <img
-                  src="./public/autoscrolling/HariRoc-EvilWomen.png"
-                  alt=""
-                />
-              </div>
-              <div className="item" style={{ "--position": 5 }}>
-                <img src="./public/autoscrolling/InVain.png" alt="" />
-              </div>
-              <div className="item" style={{ "--position": 6 }}>
-                <img src="./public/autoscrolling/K2Steppin.png" alt="" />
-              </div>
-              <div className="item" style={{ "--position": 7 }}>
-                <img
-                  src="./public/autoscrolling/love in the middle of firefight.png"
-                  alt=""
-                />
-              </div>
+              {newestSong && newestSong.length > 0 ? (
+                newestSong.map((song, index) => (
+                  <div className="item" style={{ "--position": index + 1 }}>
+                    <img src={song.songImg} alt="" />
+                  </div>
+                ))
+              ) : (
+                <></>
+              )}
             </div>
           </div>
-          {/* <div className="trendingMusic-frame-listMusic">
+          <div className="trendingMusic-frame-listMusic">
             <div className="line"></div>
             <div className="musicTrending-frame-menu">
               <div>Song</div>
@@ -116,14 +101,14 @@ const HomePage = () => {
               <div>Album</div>
               <div>Time</div>
             </div>
-            <MusicFrame></MusicFrame>
-            <MusicFrame></MusicFrame>
-            <MusicFrame></MusicFrame>
-            <MusicFrame></MusicFrame>
-            <MusicFrame></MusicFrame>
-            <MusicFrame></MusicFrame>
-            <MusicFrame></MusicFrame>
-          </div> */}
+            {newestSong && newestSong.length > 0 ? (
+              newestSong.map((song, index) => (
+                <MusicFrame song={song}></MusicFrame>
+              ))
+            ) : (
+              <></>
+            )}
+          </div>
         </div>
         <div className="newRelease-Music">
           <h2>

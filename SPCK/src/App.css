@@ -64,6 +64,7 @@ div.MP-header-frame2 div.searchMusicFrame input.Find-Music {
   color: #635757;
   padding: 10px 20px;
   outline: none;
+  font-weight: 600;
 }
 
 div.MP-header-frame2 div.searchMusicFrame input.Find-Music:focus {

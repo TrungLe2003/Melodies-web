@@ -29,7 +29,7 @@ const ArtistPage = () => {
     const fetchArtistData = async () => {
       try {
         const artistResponse = await axios.get(
-          `http://localhost:8080/api/v1/artist?artistId=${artistId}`,
+          `http://localhost:8081/api/v1/artist?artistId=${artistId}`,
           {
             headers: {
               Authorization: `Bearer ${accessToken}`,
@@ -41,7 +41,7 @@ const ArtistPage = () => {
 
         //lấy dữ liệu bài hát cả artist
         const songResponse = await axios.get(
-          `http://localhost:8080/api/v1/song/getSong?artistId=${artistId}`,
+          `http://localhost:8081/api/v1/song/getSong?artistId=${artistId}`,
           {
             headers: {
               Authorization: `Bearer ${accessToken}`,

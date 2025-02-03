@@ -1,0 +1,43 @@
+*Bất đồng bộ (Asynchronous): Là khi 1 đoạn mã không cần chờ hoàn thành mới chạy đoạn mã tiếp theo
+*Đồng bộ (Synchronous): Phải chạy xong mới được chạy đoạn mã sau
+
+*Promise: Là 1 đối tượng dùng để xử lí bất đồng bộ, là 1 lời hứa sẽ trả kết quả hoặc lỗi trong tương lai
+const myPromise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        const success = true;
+        if (success) resolve("Dữ liệu đã xử lý xong");
+        else reject("Có lỗi xảy ra");
+    }, 2000); // Giả lập xử lý sau 2 giây
+});
+
+myPromise
+    .then((result) => console.log(result)) // Khi thành công
+    .catch((error) => console.error(error)); // Khi thất bại
+
+cách hoạt động của Promise: Pending (đang xử lí) -> thành công trả result / thất bại trả về lỗi
+
+=> Promise.all(): Dùng để chạy nhiều promise, cần khi đợi nhiều tác vụ hoàn tất
+const promise1 = Promise.resolve(1);
+const promise2 = Promise.resolve(2);
+const promise3 = Promise.resolve(3);
+
+Promise.all([promise1, promise2, promise3]).then((results) => {
+  console.log(results); // [1, 2, 3]
+});
+
+*Buffer: Là 1 kiểu dữ liệu nhị phân (khi tải file mà dùng multer.memoryStorage(), file sẽ được lưu dưới dạng buffer)
+upload(req, res, (err) => {
+    if (err) return res.send("Lỗi tải file");
+    console.log(req.file.buffer); // Hiển thị dữ liệu nhị phân của file
+});
+
+*Cloudinary upload_stream() là phương thức upload ảnh từ bộ đệm (buffer) trực tiếp lên Cloudinary mà không cần lưu file tạm.
+const uploadStream = cloudinary.uploader.upload_stream(
+  { resource_type: "image" },
+  (error, result) => {
+    if (error) console.error("Lỗi", error);
+    else console.log("Uploaded URL:", result.secure_url);
+  }
+);
+
+uploadStream.end(req.file.buffer); // Gửi buffer lên Cloudinary

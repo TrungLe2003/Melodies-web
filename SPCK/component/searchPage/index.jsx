@@ -30,7 +30,7 @@ const SearchPage = () => {
   const fetchSearchResults = async (query) => {
     try {
       const response = await axios.get(
-        `http://localhost:8080/api/v1/user/search?q=${query}`,
+        `http://localhost:8081/api/v1/user/search?q=${query}`,
         {
           headers: {
             Authorization: `Bearer ${accessToken}`,

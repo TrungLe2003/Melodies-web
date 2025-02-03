@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import jwt_decode from "jwt-decode";
-//
+`//
 import User2 from "../../src/assets/User2";
 import CopyIcon from "../../src/assets/CopyIcon";
 import EditIcon2 from "../../src/assets/EditIcon2";
@@ -64,7 +64,7 @@ const ProfileUserPage = () => {
 
     try {
       const response = await axios.put(
-        "http://localhost:8080/api/v1/user/update",
+        "http://localhost:8081/api/v1/user/update",
         formData,
         {
           headers: {
@@ -94,7 +94,7 @@ const ProfileUserPage = () => {
     }
     try {
       const response = await axios.put(
-        "http://localhost:8080/api/v1/artist/detail/updated",
+        "http://localhost:8081/api/v1/artist/detail/updated",
         formData,
         {
           headers: {
@@ -118,7 +118,7 @@ const ProfileUserPage = () => {
     const fetchUserData = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:8080/api/v1/user/details",
+          "http://localhost:8081/api/v1/user/details",
           {
             headers: {
               Authorization: `Bearer ${accessToken}`,
@@ -132,7 +132,7 @@ const ProfileUserPage = () => {
         setAvaImg(userData.avatarImg || null);
         setRole(userData.role || "user");
         const artistResponse = await axios.get(
-          `http://localhost:8080/api/v1/artist/detail/${userId}`,
+          `http://localhost:8081/api/v1/artist/detail/${userId}`,
           {
             headers: {
               Authorization: `Bearer ${accessToken}`,

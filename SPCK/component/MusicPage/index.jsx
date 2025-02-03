@@ -32,7 +32,7 @@ const SongPage = () => {
     const fetchSongData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8080/api/v1/song?songId=${songId}`,
+          `http://localhost:8081/api/v1/song?songId=${songId}`,
           {
             headers: {
               Authorization: `Bearer ${accessToken}`,
@@ -45,7 +45,7 @@ const SongPage = () => {
         if (response.data.data && response.data.data.idArtist) {
           setArtistInfo(response.data.data.idArtist);
           const songResponse = await axios.get(
-            `http://localhost:8080/api/v1/song/getSong?artistId=${response.data.data.idArtist._id}&limit=6`,
+            `http://localhost:8081/api/v1/song/getSong?artistId=${response.data.data.idArtist._id}&limit=6`,
             {
               headers: {
                 Authorization: `Bearer ${accessToken}`,
@@ -60,7 +60,7 @@ const SongPage = () => {
           );
           //Lấy album của artist
           const responseArtistAlbum = await axios.get(
-            `http://localhost:8080/api/v1/album/getAlbums?artistId=${response.data.data.idArtist._id}&limit=5`,
+            `http://localhost:8081/api/v1/album/getAlbums?artistId=${response.data.data.idArtist._id}&limit=5`,
             {
               headers: {
                 Authorization: `Bearer ${accessToken}`,
@@ -72,12 +72,12 @@ const SongPage = () => {
           setArtistAlbum(artistAlbumData);
           //
           const moreArtistResponse = await axios.get(
-            "http://localhost:8080/api/v1/artist/allArtist?limit=5"
+            "http://localhost:8081/api/v1/artist/allArtist?limit=5"
           );
           const moreArtistData = moreArtistResponse.data.data;
           setMoreArtist(
             moreArtistData.filter(
-              (artist) => artist._id !== response.data.data.idArtist._id
+              (artist) => artist._id !== response.data.data.idArtist._id //artist cuar bafi hein tai
             )
           );
           // setMoreArtist(moreArtistData);

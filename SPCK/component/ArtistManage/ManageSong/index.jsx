@@ -24,7 +24,7 @@ const ArtistManageSongPage = () => {
     const fetchData = async () => {
       try {
         const songResponse = await axios.get(
-          `http://localhost:8080/api/v1/song/getSong?artistId=${artistId}`,
+          `http://localhost:8081/api/v1/song/getSong?artistId=${artistId}`,
           {
             headers: {
               Authorization: `Bearer ${accessToken}`,
@@ -50,7 +50,7 @@ const ArtistManageSongPage = () => {
   const deletedSong = async (songId) => {
     try {
       const response = await axios.delete(
-        `http://localhost:8080/api/v1/song/deletedSong/${songId}`,
+        `http://localhost:8081/api/v1/song/deletedSong/${songId}`,
         {
           headers: {
             Authorization: `Bearer ${accessToken}`,
@@ -83,7 +83,7 @@ const ArtistManageSongPage = () => {
 
     try {
       const response = await axios.put(
-        `http://localhost:8080/api/v1/song/changeDetails/${songId}`,
+        `http://localhost:8081/api/v1/song/changeDetails/${songId}`,
         formData,
         {
           headers: {

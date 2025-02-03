@@ -5,6 +5,7 @@ import PlayBtnIcon from "../../src/assets/BtnPlayIcon";
 import NextBtnIcon from "../../src/assets/PlayAudioBar/NextBtnIcon";
 import PreviousBtnIcon from "../../src/assets/PlayAudioBar/PreviousBtnIcn";
 import VolumeIcon from "../../src/assets/PlayAudioBar/VolumeIcon";
+import ResetBtnIcon from "../../src/assets/resetBtnIcon";
 //
 import "./style.css";
 
@@ -46,19 +47,24 @@ const AudioPlayerBar = () => {
       }
     }
 
-    const handleTimeUpdate = () => setCurrentTime(audio.currentTime || 0); //cập nhật time liên tục
+    const handleTimeUpdate = () => {
+      setCurrentTime(audio.currentTime || 0);
+      if (audio.currentTime >= audio.duration && audio.duration > 0) {
+        playNext();
+      } //hàm này để hiển thị thời gian đang phát và chuyển bài
+    }; //cập nhật time liên tục
     const handleLoadedData = () => setDuration(audio.duration || 0); //cập nhật thời lượng
 
     audio.addEventListener("timeupdate", handleTimeUpdate);
     audio.addEventListener("loadeddata", handleLoadedData);
 
     return () => {
-      audio.pause();
-      audio.currentTime = 0; // Reset thời gian phát
+      // audio.pause();
+      // audio.currentTime = 0; // Reset thời gian phát
       audio.removeEventListener("timeupdate", handleTimeUpdate);
       audio.removeEventListener("loadeddata", handleLoadedData);
     };
-  }, [currentSong, isPlaying]);
+  }, [currentSong]);
 
   const handlePlayPause = async () => {
     if (isProcessing) return; // Chặn nhấn liên tiếp
@@ -94,6 +100,12 @@ const AudioPlayerBar = () => {
     setVolume(newVolume);
   };
 
+  const handleResetSong = () => {
+    const audio = audioRef.current;
+    audio.currentTime = 0;
+    setCurrentTime(0);
+  };
+
   if (!currentSong) {
     return <div></div>;
   }
@@ -101,7 +113,31 @@ const AudioPlayerBar = () => {
   return (
     <div className="AudioPlayerBar">
       <div className="songInfo">
-        <img src={currentSong.songImg} alt={currentSong.songName} />
+        {isPlaying && (
+          <div class="loaderMusicPlay">
+            <div class="loading">
+              <div class="load"></div>
+              <div class="load"></div>
+              <div class="load"></div>
+              <div class="load"></div>
+              <div class="load"></div>
+            </div>
+          </div>
+        )}
+        {isPlaying ? (
+          <img
+            src={currentSong.songImg}
+            alt={currentSong.songName}
+            className="isPlaying"
+          />
+        ) : (
+          <img
+            src={currentSong.songImg}
+            alt={currentSong.songName}
+            className="notPlaying"
+          />
+        )}
+        {/* <img src={currentSong.songImg} alt={currentSong.songName} className="notPlaying"/> */}
         <div className="songNameAndArtist">
           <div className="songName">{currentSong.songName}</div>
           <div className="artistName">{currentSong.artistName}</div>
@@ -144,6 +180,11 @@ const AudioPlayerBar = () => {
         </div>
       </div>
       <div className="RightFrame">
+        <div className="moreActionFrame">
+          <div className="resetBtn" onClick={handleResetSong}>
+            <ResetBtnIcon></ResetBtnIcon>
+          </div>
+        </div>
         <div className="setVolumeFrame">
           <VolumeIcon></VolumeIcon>
           <input
@@ -157,7 +198,14 @@ const AudioPlayerBar = () => {
           />
         </div>
       </div>
-      <div className="TurnOffMusic" onClick={() => setCurrentSong(null)}>
+      <div
+        className="TurnOffMusic"
+        onClick={() => {
+          audioRef.current.pause(); // Tạm dừng nhạc
+          setCurrentSong(null); // Xóa thông tin bài hát
+          setIsPlaying(false); // Cập nhật trạng thái
+        }}
+      >
         X
       </div>
     </div>

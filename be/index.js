@@ -13,7 +13,16 @@ await mongoose
 
 const app = express();
 app.use(express.json());
-app.use(cors());
+//app.use(cors()); //cho phép tất cả origin
+
+const corsOptions = {
+  origin: ["http://localhost:5173", "http://localhost:5174"], // Cho phép cả hai origin
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  credentials: true,
+};
+
+app.use(cors(corsOptions));
+
 app.get("", (req, res) => {
   res.send({
     message: "Connected!",
@@ -22,6 +31,6 @@ app.get("", (req, res) => {
 
 app.use("/api", RootRouter);
 
-app.listen(8080, () => {
+app.listen(8081, () => {
   console.log("This is Final Project");
 });

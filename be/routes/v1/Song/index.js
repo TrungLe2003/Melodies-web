@@ -11,6 +11,8 @@ SongRouter.get("", SongController.getSongById);
 SongRouter.get("/getAlbumSong", SongController.getSongByAlbumId);
 //lấy tất cả song (có thể có limit)
 SongRouter.get("/getAllSongs", SongController.getAllSong);
+//lấy bài hát mới nhất (có limit)
+SongRouter.get("/getNewestSongs", SongController.getNewestSongs);
 
 //xóa bài hát
 SongRouter.delete("/deletedSong/:songId", SongController.deletedSongById);

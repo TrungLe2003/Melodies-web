@@ -25,7 +25,7 @@ const AlbumPage = () => {
     const fetchAlbumData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8080/api/v1/album?albumId=${albumId}`,
+          `http://localhost:8081/api/v1/album?albumId=${albumId}`,
           {
             headers: {
               Authorization: `Bearer ${accessToken}`,
@@ -37,7 +37,7 @@ const AlbumPage = () => {
         if (response.data.data && response.data.data.idArtist) {
           //Lấy bài hát của album
           const albumSongResponse = await axios.get(
-            `http://localhost:8080/api/v1/song/getAlbumSong?albumId=${albumId}`,
+            `http://localhost:8081/api/v1/song/getAlbumSong?albumId=${albumId}`,
             {
               headers: {
                 Authorization: `Bearer ${accessToken}`,
@@ -48,7 +48,7 @@ const AlbumPage = () => {
           setSongFromAlbum(songsData);
           //lấy album của artist
           const responseArtistAlbum = await axios.get(
-            `http://localhost:8080/api/v1/album/getAlbums?artistId=${response.data.data.idArtist._id}&limit=5`,
+            `http://localhost:8081/api/v1/album/getAlbums?artistId=${response.data.data.idArtist._id}&limit=5`,
             {
               headers: {
                 Authorization: `Bearer ${accessToken}`,

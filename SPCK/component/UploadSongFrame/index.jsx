@@ -20,7 +20,7 @@ const UploadSongFrame = () => {
     formDataUpload.append("audioFile", audioFile);
     try {
       const response = await axios.post(
-        "http://localhost:8080/api/v1/song/uploadSong",
+        "http://localhost:8081/api/v1/song/uploadSong",
         formDataUpload,
         {
           headers: {
