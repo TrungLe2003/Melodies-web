@@ -13,15 +13,15 @@ await mongoose
 
 const app = express();
 app.use(express.json());
-//app.use(cors()); //cho phép tất cả origin
+app.use(cors()); //cho phép tất cả origin
 
-const corsOptions = {
-  origin: ["http://localhost:5173", "http://localhost:5174"], // Cho phép cả hai origin
-  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-  credentials: true,
-};
+// const corsOptions = {
+//   origin: ["http://localhost:5173", "http://localhost:5174"], // Cho phép cả hai origin
+//   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+//   credentials: true,
+// };
 
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
 
 app.get("", (req, res) => {
   res.send({
